@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { QRCodeCanvas } from "qrcode.react";
+import './App.css';
 
 function QRCodePage() {
   const navigate = useNavigate();

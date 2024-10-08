@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import './App.css';
 
 const questionsList = [
   { question: "What is the capital of France?", answer: "Paris" },
