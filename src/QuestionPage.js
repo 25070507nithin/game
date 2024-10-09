@@ -14,7 +14,7 @@ function QuestionPage() {
   const { id } = useParams(); // Get the question index from the URL
   const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
-
+  const playerName = localStorage.getItem("playerName")
   // Ensure id is treated as an integer for accessing the questionsList
   const currentQuestionIndex = parseInt(id, 10);
   const currentQuestion = questionsList[currentQuestionIndex];
@@ -31,7 +31,7 @@ function QuestionPage() {
         navigate(`/question/${currentQuestionIndex + 1}`);
       } else {
         // No more questions, show congratulations and reset the game
-        alert("Congratulations! You've answered all questions correctly!");
+        alert(`Congratulations ${playerName} You've answered all questions correctly!`);
         navigate("/"); // Go back to QR code page or reset
       }
     } else {
